@@ -2,26 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+input,
+textarea,
+select {
+  @apply outline-none;
+  @apply border border-gray-200 rounded-sm w-full py-2 px-3;
+  @apply mb-2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input:focus,
+textarea:focus select:focus {
+  @apply border-red-900;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1 {
+  @apply text-gray-600 text-xl;
+}
+
+label {
+  @apply text-gray-800 text-sm;
+}
+
+table.basic {
+  @apply w-full bg-white rounded-sm shadow-md;
+}
+
+table.basic thead tr td,
+table.basic thead tr th {
+  @apply text-left text-sm text-gray-600 uppercase border-b border-gray-300 px-4 py-2;
+}
+
+table.basic tr td {
+  @apply px-4 py-1 ;
+}
+
+table.basic a {
+  @apply inline-flex gap-1 items-center mx-1;
+}
+
+.btn-primary {
+  @apply bg-green-500 text-white px-4 py-1 rounded-sm shadow-md;
+}
+
+.btn-red,
+.btn-default {
+  @apply py-1 px-4 rounded-md;
+}
+
+.btn-red {
+  @apply bg-red-500 text-white text-sm rounded-sm px-3 shadow-md;
+}
+
+.btn-default {
+  @apply bg-white text-gray-600 shadow-md rounded-sm px-3 ;
 }

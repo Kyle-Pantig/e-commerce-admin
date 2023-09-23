@@ -1,0 +1,22 @@
+.tiles-grid {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-5;
+}
+.tile {
+  @apply bg-white shadow-md p-4 rounded-md text-center;
+}
+
+.tile-header {
+  @apply uppercase text-gray-500 font-bold text-xs;
+}
+
+.tile-number {
+  @apply text-3xl my-2 text-center font-bold;
+}
+
+.tile-desc {
+  @apply text-sm text-gray-500;
+}
+
+.tile-title {
+  @apply my-4 text-xl font-semibold;
+}
